@@ -14,25 +14,40 @@ class AddClientAssets
      */
     public function subscribe(Dispatcher $events)
     {
-        $events->listen(ConfigureClientView::class, [$this, 'addAssets']);
+        $events->listen(ConfigureWebApp::class, [$this, 'addForumAssets']);
+        $events->listen(ConfigureWebApp::class, [$this, 'addAdminAssets']);
         $events->listen(ConfigureLocales::class, [$this, 'addLocales']);
     }
+
     /**
-     * @param ConfigureClientView $event
+     * Modifies the client view for the Forum.
+     *
+     * @param ConfigureWebApp $event
      */
-    public function addAssets(ConfigureClientView $event)
+    public function addForumAssets(ConfigureWebApp $event)
     {
         if ($event->isForum()) {
             $event->addAssets([
-                __DIR__ . '/../../js/forum/dist/extension.js',
-                __DIR__ . '/../../less/forum/extension.less',
+                __DIR__ . '/../../less/forum/upload.less',
+                __DIR__ . '/../../less/forum/download.less',
+                __DIR__ . '/../../js/forum/dist/extension.js'
             ]);
             $event->addBootstrapper('wiwatSrt/bestAnswer/main');
         }
+    }
 
+
+     /**
+     * Modifies the client view for the Admin.
+     *
+     * @param ConfigureWebApp $event
+     */
+    public function addAdminAssets(ConfigureWebApp $event)
+    {
         if ($event->isAdmin()) {
             $event->addAssets([
-                __DIR__.'/../../js/admin/dist/extension.js'
+                __DIR__ . '/../../less/admin/settingsPage.less',
+                __DIR__ . '/../../js/admin/dist/extension.js'
             ]);
             $event->addBootstrapper('wiwatSrt/bestAnswer/main');
         }
