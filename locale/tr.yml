@@ -2,6 +2,12 @@ flarum-best-answer:
     admin:
         permissions:
             best_answer: => flarum-best-answer.ref.best_answer
+        labels:
+            preferences: 
+                title: "Best Answer Perference"
+                show_best_answer_on_home: "If display the best anwser under the thread title on home page"
+                toggle: "Toggle"
+
     forum:
         this_best_answer: "Bu en iyi cevap"
         remove_best_answer: "En iyi cevap seçimini kaldır"
