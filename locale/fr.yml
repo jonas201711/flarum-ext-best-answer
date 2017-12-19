@@ -6,7 +6,12 @@ flarum-best-answer:
             preferences: 
                 title: "Best Answer Perference"
                 show_best_answer_on_home: "If display the best anwser under the thread title on home page"
-                toggle: "Toggle"    
+                toggle: "Toggle"  
+        buttons:
+            save: "Save"
+        help_texts:
+            description: "Manage the configuration of best answer extension plugin"                
+
     forum:
         this_best_answer: "La meilleure réponse"
         remove_best_answer: "Supprimer la meilleure réponse"

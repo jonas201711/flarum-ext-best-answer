@@ -1,0 +1,21 @@
+flarum-best-answer:
+    admin:
+        permissions:
+            best_answer: => flarum-best-answer.ref.best_answer
+        labels:
+            preferences: 
+                title: "最佳答案设置"
+                show_best_answer_on_home: "是否在首页面显示最佳答案"
+                toggle: "显示/隐藏"
+        buttons:
+            save: "保存"
+        help_texts:
+            description: "最佳答案相关的设置"
+    forum:
+        this_best_answer: "这是最佳答案"
+        remove_best_answer: "移除最佳答案"
+        header_best_answer: "被贴主标记为最佳答案"
+        best_answer_button: => flarum-best-answer.ref.best_answer
+        best_answer: => flarum-best-answer.ref.best_answer
+    ref:
+      best_answer: 'Best Answer'

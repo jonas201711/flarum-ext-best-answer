@@ -7,7 +7,10 @@ flarum-best-answer:
                 title: "Best Answer Perference"
                 show_best_answer_on_home: "If display the best anwser under the thread title on home page"
                 toggle: "Toggle"
-
+        buttons:
+            save: "Save"
+        help_texts:
+            description: "Manage the configuration of best answer extension plugin"
     forum:
         this_best_answer: "Bu en iyi cevap"
         remove_best_answer: "En iyi cevap seçimini kaldır"
