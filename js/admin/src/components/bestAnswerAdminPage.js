@@ -13,12 +13,12 @@ export default class BestAnswerPage extends Component {
 
     // the fields we need to watch and to save
     this.fields = [
-        showBestAnswerOnHomepage
+        'showBestAnswerOnHomepage'
     ];
 
     // the checkboxes we need to watch and to save.
     this.checkboxes = [
-        showBestAnswerOnHomepage
+        'showBestAnswerOnHomepage'
     ];
 
     // get the saved settings from the database
@@ -35,7 +35,7 @@ export default class BestAnswerPage extends Component {
       this.values[key] = m.prop(settings[this.addPrefix(key)])
     );
     this.checkboxes.forEach(key =>
-      this.values[key] = m.prop(settings[this.addPrefix(key)] === '1')
+      this.values[key] = m.prop(settings[this.addPrefix(key)] === true)
     );
    
   }

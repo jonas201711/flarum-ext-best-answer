@@ -1,6 +1,6 @@
 "use strict";
 
-System.register("wiwatSrt/bestAnswer/addBestAnswerPane", ["flarum/extend", "flarum/components/AdminNav", "flarum/components/AdminLinkButton", "wiwatSrt/bestAnswer/components/bestAnswerAdminPage"], function (_export, _context) {
+System.register("wiwatSrt/bestAnswer/addBestAnswerPage", ["flarum/extend", "flarum/components/AdminNav", "flarum/components/AdminLinkButton", "wiwatSrt/bestAnswer/components/bestAnswerAdminPage"], function (_export, _context) {
     "use strict";
 
     var extend, AdminNav, AdminLinkButton, BestAnswerPage;
@@ -76,10 +76,10 @@ System.register('wiwatSrt/bestAnswer/components/bestAnswerAdminPage', ['flarum/C
             this.loading = false;
 
             // the fields we need to watch and to save
-            this.fields = [showBestAnswerOnHomepage];
+            this.fields = ['showBestAnswerOnHomepage'];
 
             // the checkboxes we need to watch and to save.
-            this.checkboxes = [showBestAnswerOnHomepage];
+            this.checkboxes = ['showBestAnswerOnHomepage'];
 
             // get the saved settings from the database
             var settings = app.data.settings;
@@ -94,7 +94,7 @@ System.register('wiwatSrt/bestAnswer/components/bestAnswerAdminPage', ['flarum/C
               return _this2.values[key] = m.prop(settings[_this2.addPrefix(key)]);
             });
             this.checkboxes.forEach(function (key) {
-              return _this2.values[key] = m.prop(settings[_this2.addPrefix(key)] === '1');
+              return _this2.values[key] = m.prop(settings[_this2.addPrefix(key)] === true);
             });
           }
         }, {
