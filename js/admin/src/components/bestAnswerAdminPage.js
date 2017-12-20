@@ -35,7 +35,7 @@ export default class BestAnswerPage extends Component {
       this.values[key] = m.prop(settings[this.addPrefix(key)])
     );
     this.checkboxes.forEach(key =>
-      this.values[key] = m.prop(settings[this.addPrefix(key)] === true)
+      this.values[key] = m.prop(settings[this.addPrefix(key)] === "1")
     );
    
   }

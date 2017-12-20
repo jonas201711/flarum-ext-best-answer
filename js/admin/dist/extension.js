@@ -94,7 +94,7 @@ System.register('wiwatSrt/bestAnswer/components/bestAnswerAdminPage', ['flarum/C
               return _this2.values[key] = m.prop(settings[_this2.addPrefix(key)]);
             });
             this.checkboxes.forEach(function (key) {
-              return _this2.values[key] = m.prop(settings[_this2.addPrefix(key)] === true);
+              return _this2.values[key] = m.prop(settings[_this2.addPrefix(key)] === "1");
             });
           }
         }, {
